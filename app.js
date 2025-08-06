@@ -45,7 +45,7 @@ entradaDeDados.question('Seja bem-vindo a Decora fácil! Por favor, digite seu n
                 entradaDeDados.question('Digite o valor do produto: ', function (valor1) {
                     let valorProduto = Number(valor1)
 
-                    if (valorProduto == '' || Number(valorProduto) < 0) {
+                    if (valorProduto == '' || Number(valorProduto) < 0 || isNaN(valorProduto)) {
                         console.log(MESSAGE_ERROR)
                         entradaDeDados.close()
 
@@ -54,7 +54,7 @@ entradaDeDados.question('Seja bem-vindo a Decora fácil! Por favor, digite seu n
                         entradaDeDados.question('Digite o valor dos juros anuais: ', function (valor2) {
                             let jurosAnuais = Number(valor2)
 
-                            if (jurosAnuais == '' || Number(jurosAnuais) < 0) {
+                            if (jurosAnuais == '' || Number(jurosAnuais) < 0 || isNaN(jurosAnuais)) {
                                 console.log(MESSAGE_ERROR)
                                 entradaDeDados.close()
 
@@ -63,7 +63,7 @@ entradaDeDados.question('Seja bem-vindo a Decora fácil! Por favor, digite seu n
                                 entradaDeDados.question('Digite o número de vezes que os juros são compostos por ano: ', function (valor3) {
                                     let jurosCompostos = Number(valor3)
 
-                                    if (jurosCompostos == '' || Number(jurosCompostos) < 0) {
+                                    if (jurosCompostos == '' || Number(jurosCompostos) < 0 || isNaN(jurosCompostos)) {
                                         console.log(MESSAGE_ERROR)
                                         entradaDeDados.close()
 
@@ -72,7 +72,7 @@ entradaDeDados.question('Seja bem-vindo a Decora fácil! Por favor, digite seu n
                                         entradaDeDados.question('Digite a quantidade de anos do parcelamento: ', function (valor4) {
                                             let anosParcelados = Number(valor4)
 
-                                            if (anosParcelados == '' || Number(anosParcelados) < 0) {
+                                            if (anosParcelados == '' || Number(anosParcelados) < 0 || isNaN(anosParcelados)) {
                                                 console.log(MESSAGE_ERROR)
                                                 entradaDeDados.close()
                                             } else {
